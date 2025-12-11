@@ -76,7 +76,7 @@ export const NewsTitle = styled.h3.withConfig({
   shouldForwardProp: (prop) => prop !== 'size' && prop !== 'direction' // 'size'와 'direction' prop을 DOM에 전달되지 않도록 필터링
 })<{ size?: number; direction: 'row' | 'column' }>`
   //height는 고정
-  height: ${({ direction }) => (direction === 'row' ? 'fit-content' : '45px')};
+  height: ${({ direction }) => (direction === 'row' ? 'fit-content' : '60px')};
   font-size: ${({ size }) => (size ? `${size}px` : '20px')};
   font-weight: 600;
   text-align: left;
