@@ -7,10 +7,9 @@ function SNSLogin() {
     const REDIRECT_URI = import.meta.env.VITE_REDIRECT_URI;
     const KAKAO_REST_API_KEY = import.meta.env.VITE_KAKAO_REST_API_KEY;
     const KAKAO_LOGIN_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_REST_API_KEY}&redirect_uri=${REDIRECT_URI + '/kakao'}&response_type=code`;
-    const NAVER_CLIENT_ID = import.meta.env.VITE_NAVER_CLIENT_ID; //
-    const NAVER_CLIENT_SECRET = import.meta.env.VITE_NAVER_CLIENT_SECRET; //
-    const NAVER_LOGIN_URL = `https://nid.naver.com/oauth2.0/authorize?client_id=${NAVER_CLIENT_ID}&response_type=code&redirect_uri=${REDIRECT_URI + '/naver'}&state=${NAVER_CLIENT_SECRET}`;
-    const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID; //
+    const NAVER_CLIENT_ID = import.meta.env.VITE_NAVER_CLIENT_ID;
+    const NAVER_LOGIN_URL = `https://nid.naver.com/oauth2.0/authorize?client_id=${NAVER_CLIENT_ID}&response_type=code&redirect_uri=${REDIRECT_URI + '/naver'}`;
+    const GOOGLE_CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
     const GOOGLE_LOGIN_URL = `https://accounts.google.com/o/oauth2/v2/auth?client_id=${GOOGLE_CLIENT_ID}&redirect_uri=${REDIRECT_URI + '/google'}&response_type=code&scope=email%20profile`;
 
     const handleKakaoLogin = () => {
